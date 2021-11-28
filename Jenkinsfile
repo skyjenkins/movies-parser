@@ -13,6 +13,11 @@ node('workers'){
                 imageTest.inside{
                     sh 'golint'
                 }
+            },
+            'Unit Tests': {
+                imageTest.inside{
+                    sh 'go test'
+                }
             }
         )
     }
